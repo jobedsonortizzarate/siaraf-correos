@@ -1,0 +1,15 @@
+{{!-- {{body}}}} --}}
+
+{{!-- {{success}}}} is equal to {{success}}}} --}}
+{{#if respaldoDetalle.success}}
+    <p style="color:black;font-family:arial;font-size:8px;">{{respaldoDetalle.version}}</p>
+    <br/>
+    <p style="color:midnightblue;font-family:courier;font-size:14px;">Respaldo de {{respaldoDetalle.dbNombre}} en {{respaldoDetalle.server_name}}.</p>
+    <p style="color:midnightblue;font-family:courier;font-size:14px;">Inicio {{respaldoDetalle.fechaInicio}}, fin {{respaldoDetalle.fechaFinOFallo}}  </p>
+    <p style="color:midnightblue;font-family:courier;font-size:10px;">Archivo de respaldo {{respaldoDetalle.dbbakfullpath}}({{respaldoDetalle.dbsize}} bytes) generado y comprobado correctamente</p>
+{{else}}
+    <p style="color:black;font-family:arial;font-size:8px;">{{respaldoDetalle.version}}</p>
+    <br/>
+    <p style="color:maroon;font-family:courier;font-size:14px;">Respaldo de {{respaldoDetalle.dbNombre}} en {{respaldoDetalle.server_name}}, {{respaldoDetalle.fechaFinOFallo}}.</p>
+    <p style="color:maroon;font-family:courier;font-size:10px;">Errores en la generacion de respaldo: No se encontro archivo de respaldo {{respaldoDetalle.dbbakfullpath}}</p>
+{{/if}}

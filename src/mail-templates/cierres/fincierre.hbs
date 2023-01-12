@@ -1,0 +1,27 @@
+<p style="color:black;font-family:ARIAL;font-size:14px;">Relación de Carteras a las que se les realizó proceso de cierre {{id}} en el ambiente de {{ambiente}} {{dateToday}} </p>
+<p style="color:black;font-family:ARIAL;font-size:14px;"></p>
+<p style="color:black;font-family:ARIAL;font-size:14px;">NÚMERO DE ORDEN: {{id}} </p>
+
+<TABLE WIDTH="1000">
+<TR>
+<TD bgcolor="#489CDF"  width="80"><font color="white">Encomienda</font></TD>
+<TD bgcolor="#489CDF"  width="230"><font color="white">Nombre</font></TD>
+<TD bgcolor="#489CDF"  width="100"><font color="white">Fecha Inicio</font></TD>
+<TD bgcolor="#489CDF"  width="100"><font color="white">Hora Inicio</font></TD>
+<TD bgcolor="#489CDF"  width="100"><font color="white">Fecha Termino</font></TD>
+<TD bgcolor="#489CDF"  width="100"><font color="white">Hora Termino</font></TD>  
+<TD bgcolor="#489CDF"  width="100"><font color="white">Fecha Cartera</font></TD>
+<TD bgcolor="#489CDF"  width="500"><font color="white">Error</font></TD>
+</TR> 
+{{#cierreDetalles}}
+<TR>
+<TD><font color="black"> {{cveEncomienda}} </font></TD>
+<TD><font color="black"> {{nombreEncomienda}} </font></TD>
+<TD><font color="black"> {{fecha}} </font></TD>
+<TD><font color="black"> {{hora}} </font></TD>
+<TD><font color="black"> {{fechaFin}} </font></TD>
+<TD><font color="black"> {{horaFin}} </font></TD>
+<TD><font color="black"> {{fechaCartera}} </font></TD>
+<TD><font color="red"> {{encomiendaError}} </font></TD>   
+</TR>
+{{/cierreDetalles}}

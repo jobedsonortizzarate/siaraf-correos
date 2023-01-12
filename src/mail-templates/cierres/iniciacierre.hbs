@@ -1,0 +1,22 @@
+<p style="color:black;font-family:ARIAL;font-size:14px;">Relación de Carteras que se les realizará el proceso de cierre {{id}} en el ambiente de {{ambiente}} {{dateToday}} </p>
+<p style="color:black;font-family:ARIAL;font-size:14px;"></p>
+<p style="color:black;font-family:ARIAL;font-size:14px;">NÚMERO DE ORDEN: {{id}} </p>
+
+
+<TABLE WIDTH="1000">
+<TR>
+<TD bgcolor="#489CDF"  width="60"><font color="white">Encomienda</font></TD>
+<TD bgcolor="#489CDF"  width="200"><font color="white">Nombre</font></TD>
+<TD bgcolor="#489CDF"  width="100"><font color="white">Cierre</font></TD>
+<TD bgcolor="#489CDF"  width="80"><font color="white">Fecha</font></TD>
+<TD bgcolor="#489CDF"  width="60"><font color="white">Horario</font></TD>
+</TR>
+{{#cierreDetalles}}
+<TR>    
+    <TD><font color="black"> {{cveEncomienda}} </font></TD>
+    <TD><font color="black"> {{nombreEncomienda}} </font></TD>
+    <TD><font color="black"> {{descripcionCierre}} </font></TD>
+    <TD><font color="black"> {{fecha}}</font></TD>
+    <TD><font color="black"> {{hora}} </font></TD>
+</TR>
+{{/cierreDetalles}}

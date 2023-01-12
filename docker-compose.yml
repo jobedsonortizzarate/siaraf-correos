@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  microservicecatalogs:
+    image: microservicecatalogs
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://postgres:qaz.wsx1@host.docker.internal:5432/postgres
+      - POSTGRES_HOST=host.docker.internal
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=qaz.wsx1
+      - POSTGRES_DATABASE=catalogsbd
+      - MODE=DEV
+      - RUN_MIGRATIONS=true
+      - DB_SYNC=false
+      - DEFAULT_LIMIT=20
+    ports:
+      - "3003:3000" 
+      - "9232:9229"
+
+
