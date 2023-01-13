@@ -87,7 +87,7 @@ async function bootstrap() {
   app.setGlobalPrefix('/api-cor/v1');
   //configuracion de swagger
   const options = new DocumentBuilder()
-    .setTitle('INDEP-SIARAF CORREOS API')
+    .setTitle('INDEP-SIARAF correos API (Prueba de IC)')
     .setDescription('Microservicio para las notificaciones de Cierres')
     .setVersion('1.0.0')
     // .addBearerAuth()
